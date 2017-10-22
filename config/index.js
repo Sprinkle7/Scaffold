@@ -1,4 +1,8 @@
 // see http://vuejs-templates.github.io/webpack for documentation.
+
+/* 根据环境变量获取对应配置 */
+module.exports = require('./' + (process.env.BUILD_ENV || 'dev') + '.env.js');
+
 var path = require('path')
 
 module.exports = {
